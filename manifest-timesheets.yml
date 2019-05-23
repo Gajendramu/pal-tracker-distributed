@@ -1,12 +1,13 @@
 applications:
-- name: tracker-timesheets3
+- name: tracker-timesheetstest
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
   - route: timesheets-pal-gajendramu1.apps.dev.pcf-aws.com
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-gajendramu1.apps.dev.pcf-aws.com
+   # REGISTRATION_SERVER_ENDPOINT: https://registration-pal-gajendramu1.apps.dev.pcf-aws.com
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
-  - tracker-timesheets-database-hdc1
+  - tracker-timesheets-database-hdc2
+  - tracker-service-registry

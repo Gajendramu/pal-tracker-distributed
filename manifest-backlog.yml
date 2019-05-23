@@ -1,12 +1,13 @@
 applications:
-- name: tracker-backlog3
+- name: tracker-backlogtest
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
   - route: backlog-pal-gajendramu1.apps.dev.pcf-aws.com
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-gajendramu1.apps.dev.pcf-aws.com
+    #REGISTRATION_SERVER_ENDPOINT: https://registration-pal-gajendramu1.apps.dev.pcf-aws.com
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
-  - tracker-backlog-database-hdc1
+  - tracker-backlog-database-hdc2
+  - tracker-service-registry

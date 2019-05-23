@@ -1,12 +1,13 @@
 applications:
-- name: tracker-allocations3
+- name: tracker-allocationstest
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocations-pal-gajendramu1.apps.dev.pcf-aws.com
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-gajendramu1.apps.dev.pcf-aws.com
+    #REGISTRATION_SERVER_ENDPOINT: https://registration-pal-gajendramu1.apps.dev.pcf-aws.com
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
-  - tracker-allocations-database-hdc1
+  - tracker-allocations-database-hdc2
+  - tracker-service-registry

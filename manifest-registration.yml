@@ -1,5 +1,5 @@
 applications:
-- name: tracker-registration3
+- name: tracker-registrationtest
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-gajendramu1.apps.dev.pcf-aws.com
@@ -8,4 +8,5 @@ applications:
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
-  - tracker-registration-database-hdc1
+  - tracker-registration-database-hdc2
+  - tracker-service-registry

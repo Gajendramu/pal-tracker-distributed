@@ -12,3 +12,4 @@ applications:
   - tracker-registration-database-hdc2
   - tracker-service-registry
   - tracker-sso
+  - tracker-config-server
